@@ -14,7 +14,7 @@ const Header = () => {
             <div className="header__inner">
                 <div className="header__logo">
                     <h1>
-                        <a href="#">사이트 만들기<em>DTS-NewGRF</em></a>
+                        <a href="#">Next.js<em>사이트 만들기</em></a>
                     </h1>
                 </div>
                 <nav
