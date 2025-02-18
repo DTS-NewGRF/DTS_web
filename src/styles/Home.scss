@@ -1,0 +1,87 @@
+// 홈 컨테이너
+.home__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: $secondary-color;  // 배경색 추가
+}
+
+// 이미지 섹션 스타일
+.image__section {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+}
+
+// 문서 섹션 스타일
+.text__section {
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    margin-bottom: 40px;
+
+    h1 {
+        color: $heading-color;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    h2 {
+        color: $primary-color;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        font-weight: normal;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: $dark-color;  // 본문 텍스트 색상
+    }
+
+    a {
+        text-decoration: none;
+        color: $primary-color;
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 10px 20px;
+        border: 2px solid $primary-color;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: $primary-color;
+            color: white;
+        }
+    }
+}
+
+// 로딩 텍스트 스타일
+.loading-text {
+    font-size: 1.2rem;
+    color: $primary-color;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+}

@@ -1,0 +1,155 @@
+/* src/styles/Header.scss */
+@import './variables';
+@import './mixin.scss';
+
+.skip-link {
+        position: absolute;
+        top: -999px;
+        left: 0;
+        background-color: $header-background;
+        color: white;
+        padding: 10px;
+        font-size: 16px;
+        text-decoration: none;
+        z-index: 1000;
+    }
+  
+.skip-link:focus {
+    top: 10px;
+    outline: 2px solid #ff9900;
+}
+  
+#header {
+    background-color: $background-color;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+
+    .header__inner {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .header__logo {
+            a {
+                font-size: 30px;
+                font-weight: 600;
+                color: $text-color;
+                text-decoration: none;
+            }
+            em {display: block;
+                font-size: 15px;}
+        }
+        .header__nav {
+            ul {
+                display: flex;
+                gap: 20px;
+                list-style: none;
+                text-align: right;
+
+                li {
+                    position: relative;
+
+                    &:hover::after {
+                        content: ''; /* 가상의 요소 생성 */
+                        position: absolute;
+                        bottom: -2px;
+                        left: 0;
+                        width: 100%;
+                        height: 2px; /* 라인 두께 */
+                        background-color: #e3cfcf; /* 라인 색상 */
+                        transition: all 0.3s;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: $text-color;
+                        font-weight: 500;
+                        transition: all 0.3s;
+
+                        &:hover {
+                            color: $hover-text-color;
+                        }
+                    }
+                }
+            }
+
+            @media (max-width:800px) {
+                display: none;
+
+                &.show {
+                    display: block;
+    
+                    ul {
+                        display: block;
+                        position: absolute;
+                        width: 140px;
+                        right: 0;
+                        top: 84px;
+                        background: $background-color;
+                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                        backdrop-filter: blur(15px);
+                        z-index: 1000;
+    
+                        li {
+                            display: block;
+                            text-align: right;
+                            a {
+                                display: inline-block;
+                                padding: 10px;
+                            }
+                        }
+                    }
+                }
+                &.show + .header__nav__mobile span::before {
+                    width: 20px;
+                }
+                &.show + .header__nav__mobile span::after {
+                    width: 20px;
+                }
+            }
+        }
+        .header__nav__mobile {
+            width: 40px;
+            height: 40px;
+            @include flex-center;
+            cursor: pointer;
+            display: none;
+    
+            span {
+                display: block;
+                width: 40px;
+                height: 2px;
+                background-color: $header-nav-mobile-color;
+                position: relative;
+                margin-top: 19px;
+    
+                &::before {
+                    content: "";
+                    width: 40px;
+                    height: 2px;
+                    background-color: $header-nav-mobile-color;
+                    position: absolute;
+                    right: 0;
+                    top: 6px;
+                    transition: width 0.3s;
+                }
+    
+                &::after {
+                    content: "";
+                    width: 40px;
+                    height: 2px;
+                    background-color: $header-nav-mobile-color;
+                    position: absolute;
+                    left: 0;
+                    bottom: 6px;
+                    transition: width 0.3s;
+                }
+            }
+
+            @media (max-width:800px) {
+                display: block;
+            }
+        }
+    }
+}

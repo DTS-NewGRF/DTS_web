@@ -1,0 +1,33 @@
+// 주요 색상 (변경된 색상)
+$primary-color: #4e92d2;  // 부드러운 파란색
+$heading-color: #212121;  // 어두운 회색 (헤딩에 사용할 색)
+$secondary-color: #f1f3f8;  // 밝은 회색 (배경용)
+$accent-color: #ff7f50;    // 코랄 색상 (부드러운 빨간색)
+$dark-color: #212121;     // 어두운 회색 (텍스트 색상)
+$light-color: #f5f5f5;    // 아주 밝은 회색 (세부 배경)
+
+// 배경 색상
+$background-color: $secondary-color;  // 전체 배경
+$header-background: $heading-color; // 헤더 배경 (어두운 회색)
+
+// 텍스트 색상
+$text-color: #333;           // 기본 텍스트 색상
+$header-text-color: #111;    // 헤더 텍스트 색상 (더 어두운 회색)
+$footer-text-color: #fff;    // 푸터 텍스트 색상 (흰색)
+$hover-text-color: #007bff;  // 링크 hover 색상 (파랑색)
+
+// 링크 색상
+$link-color: $primary-color;     // 링크 색상 (부드러운 파란색)
+$link-hover-color: darken($primary-color, 20%);  // 링크 hover 색상 (약간 어두운 파란색)
+
+// 강조 색상
+$highlight-color: $accent-color; // 강조 색상 (코랄 색상)
+$highlight-text-color: $light-color; // 강조 텍스트 색상 (아주 밝은 회색)
+
+// 버튼 색상
+$button-background-red: $accent-color; // 버튼 배경색 (코랄 색상)
+$button-background-blue: $primary-color; // 버튼 배경색 (부드러운 파란색)
+$button-text-color: #fff; // 버튼 텍스트 색상 (흰색)
+
+// 햄버거 메뉴
+$header-nav-mobile-color: #000;  // 햄버거 메뉴 색상 (검정색)
