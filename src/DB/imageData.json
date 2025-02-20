@@ -1,0 +1,18 @@
+[
+    {
+        "src": "https://github.com/DTS-NewGRF/DTS/blob/minengallery/src/locomotive/CDC/CDC_Baekje_Crown.png?raw=true",
+        "sections": [
+            { "name": "Baekje_Crown_TC", "x": 221, "y": 0, "width": 32, "height": 14 },
+            { "name": "Baekje_Crown_M", "x": 221, "y": 54, "width": 32, "height": 14 },
+            { "name": "Baekje_Crown_TD", "x": 221, "y": 108, "width": 31, "height": 14 }
+        ]
+    },
+    {
+        "src": "https://github.com/DTS-NewGRF/DTS/blob/minengallery/src/locomotive/CDC/CDC_Beach.png?raw=true",
+        "sections": [
+            { "name": "Beach_TC", "x": 221, "y": 0, "width": 32, "height": 14 },
+            { "name": "Beach_M", "x": 221, "y": 54, "width": 32, "height": 14 },
+            { "name": "Beach_TD", "x": 221, "y": 108, "width": 31, "height": 14 }
+        ]
+    }
+]

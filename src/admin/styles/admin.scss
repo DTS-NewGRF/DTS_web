@@ -1,0 +1,190 @@
+@import '../../styles/variables';
+
+// 관리자 로그인 페이지 스타일
+.admin-login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: $secondary-color;
+  
+    .login-form {
+      width: 100%;
+      max-width: 400px;
+      padding: 40px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  
+      h2 {
+        text-align: center;
+        color: $heading-color;
+        margin-bottom: 30px;
+      }
+  
+      input {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid $secondary-color;
+        border-radius: 4px;
+        color: $dark-color;
+        transition: border-color 0.3s ease;
+  
+        &:focus {
+          outline: none;
+          border-color: $primary-color;
+        }
+      }
+  
+      .error-message {
+        color: $accent-color;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+  
+      button {
+        width: 100%;
+        padding: 12px;
+        background-color: $button-background-blue;
+        color: $button-text-color;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: darken($primary-color, 10%);
+        }
+      }
+    }
+  }
+  
+  // 관리자 대시보드 스타일
+  .admin-dashboard {
+    display: flex;
+    height: 100vh;
+  
+    .sidebar {
+      width: 250px;
+      background-color: $heading-color;
+      color: $light-color;
+      padding: 20px;
+  
+      .logo {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $light-color;
+      }
+  
+      .menu {
+        list-style: none;
+        padding: 0;
+  
+        li {
+          margin-bottom: 15px;
+  
+          a {
+            color: $light-color;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+  
+            &:hover, &.active {
+              background-color: rgba($primary-color, 0.3);
+            }
+          }
+        }
+      }
+    }
+  
+    .main-content {
+      flex-grow: 1;
+      background-color: $secondary-color;
+      padding: 20px;
+      overflow-y: auto;
+  
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+        .title {
+          font-size: 1.5rem;
+          color: $heading-color;
+        }
+  
+        .user-info {
+          display: flex;
+          align-items: center;
+  
+          .username {
+            margin-right: 15px;
+            color: $dark-color;
+          }
+  
+          .logout-btn {
+            background-color: $accent-color;
+            color: $button-text-color;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+  
+            &:hover {
+              background-color: darken($accent-color, 10%);
+            }
+          }
+        }
+      }
+  
+      .dashboard-content {
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+        .dashboard-card {
+          background-color: $light-color;
+          border-radius: 8px;
+          padding: 20px;
+          margin-bottom: 20px;
+  
+          h3 {
+            color: $heading-color;
+            margin-bottom: 15px;
+          }
+  
+          .card-content {
+            color: $dark-color;
+          }
+        }
+      }
+    }
+  }
+  
+  // 반응형 디자인
+  @media (max-width: 768px) {
+    .admin-dashboard {
+      flex-direction: column;
+  
+      .sidebar {
+        width: 100%;
+        height: auto;
+      }
+  
+      .main-content {
+        width: 100%;
+      }
+    }
+  }

@@ -1,0 +1,14 @@
+[
+    {
+      "groupName": "Group1",
+      "images": ["Baekje_Crown_TC", "Baekje_Crown_M", "Baekje_Crown_TD"],
+      "title": "CDC_Baekje_Crown",
+      "speed": 2000
+    },
+    {
+      "groupName": "Group2",
+      "images": ["Beach_TC", "Beach_M", "Beach_TD"],
+      "title": "CDC_Beach",
+      "speed": 1500
+    }
+  ]
