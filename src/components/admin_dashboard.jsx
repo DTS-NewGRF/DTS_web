@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import Cookies from 'js-cookie';
+import '../styles/admin.scss';
 
 export default function AdminDashboard() {
   const router = useRouter();
@@ -7,7 +9,7 @@ export default function AdminDashboard() {
 
   useEffect(() => {
     // 토큰 확인 및 인증 로직
-    const token = localStorage.getItem('adminToken');
+    const token = Cookies.get('admin_access_token');
     
     if (!token) {
       // 토큰이 없으면 로그인 페이지로 리다이렉트
@@ -20,7 +22,7 @@ export default function AdminDashboard() {
 
   const handleLogout = () => {
     // 로그아웃 시 토큰 제거 및 로그인 페이지로 리다이렉트
-    localStorage.removeItem('adminToken');
+    Cookies.remove('admin_access_token', { path: '/' });
     router.push('/admin');
   };
 

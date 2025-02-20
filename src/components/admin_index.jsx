@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import Cookies from 'js-cookie';
 
 export default function AdminLogin() {
   const router = useRouter();
@@ -12,9 +13,17 @@ export default function AdminLogin() {
     
     try {
       // 환경변수 사용 로그인 로직
-      if (username === admin && 
-          password === 1234) {
-        localStorage.setItem('adminToken', 'secure_token');
+      if (
+        username === process.env.NEXT_PUBLIC_ADMIN_ID && 
+        password === process.env.NEXT_PUBLIC_ADMIN_PASSWORD
+      ) {
+        // 쿠키에 토큰 저장
+        Cookies.set('admin_access_token', 'admin_token', { 
+          expires: 1, // 1일 동안 유효
+          path: '/' 
+        });
+        
+        // 대시보드로 이동
         router.push('/admin/dashboard');
       } else {
         setError('로그인 정보가 일치하지 않습니다.');
