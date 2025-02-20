@@ -12,8 +12,8 @@ export default function AdminLogin() {
     
     try {
       // 환경변수 사용 로그인 로직
-      if (username === process.env.NEXT_PUBLIC_ADMIN_ID && 
-          password === process.env.NEXT_PUBLIC_ADMIN_PASSWORD) {
+      if (username === admin && 
+          password === 1234) {
         localStorage.setItem('adminToken', 'secure_token');
         router.push('/admin/dashboard');
       } else {
