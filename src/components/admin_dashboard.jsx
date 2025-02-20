@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import '../styles/admin.scss';
 
 export default function AdminDashboard() {
   const router = useRouter();
